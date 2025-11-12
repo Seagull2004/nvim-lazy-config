@@ -48,23 +48,3 @@ vim.api.nvim_create_user_command("Random", function(opts)
 end, { range = true })
 
 
-require("mason").setup()
-require("mason-lspconfig").setup({
-  ensure_installed = {
-    "ast_grep",
-    "rust_analyzer",
-    "clangd",
-    "cssls",
-    "dockerls",
-    "html",
-    "jdtls",
-    "ltex",
-    "lua_ls",
-    "texlab",
-    "ts_ls",
-    "tailwindcss",
-    "pyright",
-    "emmet_ls",
-    "hls"
-  }
-})
