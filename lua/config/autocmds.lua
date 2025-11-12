@@ -29,9 +29,7 @@ vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged" }, {
   end,
 })
 
--- vim.api.nvim_set_keymap("n", "<leader>", ":lua ToggleAutosave()<CR>", { noremap = true, silent = true })
-
--- mescolare le linee selezionate
+-- MESCOLARE LE LINEE SELEZIONATE
 -- comando: :Random
 function ShuffleLinesRange(start_line, end_line)
   local lines = vim.api.nvim_buf_get_lines(0, start_line - 1, end_line, false)
@@ -48,3 +46,25 @@ vim.api.nvim_create_user_command("Random", function(opts)
   local end_line = opts.line2
   ShuffleLinesRange(start_line, end_line)
 end, { range = true })
+
+
+require("mason").setup()
+require("mason-lspconfig").setup({
+  ensure_installed = {
+    "ast_grep",
+    "rust_analyzer",
+    "clangd",
+    "cssls",
+    "dockerls",
+    "html",
+    "jdtls",
+    "ltex",
+    "lua_ls",
+    "texlab",
+    "ts_ls",
+    "tailwindcss",
+    "pyright",
+    "emmet_ls",
+    "hls"
+  }
+})
