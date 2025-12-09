@@ -7,7 +7,6 @@ return {
     picker = {
       sources = {
         explorer = {
-          auto_open = false,
           layout = {
             layout = {
               position = "right",
