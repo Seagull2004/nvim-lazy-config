@@ -6,9 +6,9 @@ local map = vim.keymap.set
 
 -- GENERIC
 map("n", "<leader>h", ":nohlsearch<CR>") -- remove search highlights
-map("v", "<Leader>cp", '"+y') -- yank stuff in sys buffer
-map("n", "<Leader>cp", ":%y+<CR>") -- copy all file in sys buffer
-map("n", "<Leader>da", ":%d<CR>") -- delete content of file
+map("v", "<Leader>cp", '"+y')            -- yank stuff in sys buffer
+map("n", "<Leader>cp", ":%y+<CR>")       -- copy all file in sys buffer
+map("n", "<Leader>da", ":%d<CR>")        -- delete content of file
 map("n", "<leader><leader>x", "<cmd>source %<CR>")
 map("n", "<leader>x", ":.lua<CR>")
 map("v", "<leader>x", ":lua<CR>")
@@ -17,6 +17,8 @@ map("v", "<leader>x", ":lua<CR>")
 -- SCROLLING
 map("n", "<C-d>", "<C-d>zz")
 map("n", "<C-u>", "<C-u>zz")
+map("n", "{", "{zz")
+map("n", "}", "}zz")
 
 
 -- TELESCOPE (temporaneamente disintallato)
