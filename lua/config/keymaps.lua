@@ -29,3 +29,10 @@ map("n", "N", "Nzz")
 -- map("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
 -- map("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
 -- map("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
+
+vim.keymap.set("n", "<leader><leader>", function()
+  Snacks.picker.files({
+    hidden = true, -- 🔑 include dotfolder e dotfile
+    ignored = true, -- ✅ rispetta .gitignore
+  })
+end, { desc = "Find files (include dotfolders)" })
