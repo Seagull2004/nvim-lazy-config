@@ -24,6 +24,7 @@ map("n", "N", "Nzz")
 
 -- TERMINAL
 map("t", "<Esc>", "<C-\\><C-n>", {noremap=true, desc="just use esc to go in n mode"})
+map("t", "<C-k>", "<C-\\><C-n><C-W>k", {noremap=true, desc="just use esc to go in n mode"})
 map("n", "<leader>t", function()
   -- vim.cmd.vnew()
   vim.cmd("sp")
