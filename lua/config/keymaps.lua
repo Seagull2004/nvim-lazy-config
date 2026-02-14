@@ -24,12 +24,12 @@ map("n", "N", "Nzz")
 
 -- TERMINAL
 map("t", "<Esc>", "<C-\\><C-n>", {noremap=true, desc="just use esc to go in n mode"})
-map("n", "<leader>rt", function()
+map("n", "<leader>t", function()
   -- vim.cmd.vnew()
   vim.cmd("sp")
   vim.cmd.term()
   -- vim.cmd.wincmd("J")
-  vim.api.nvim_win_set_height(0, 5)
+  vim.api.nvim_win_set_height(0, 15)
   vim.cmd("startinsert")
 end, { desc = "Open a little terminal", noremap=true })
 

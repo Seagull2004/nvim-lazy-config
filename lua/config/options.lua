@@ -9,3 +9,4 @@ vim.g.snacks_animate = false
 vim.g.lazyvim_eslint_auto_format = false
 vim.g.minipairs_disable = true
 
+vim.opt.guicursor = "n-v-c:block,i-ci-ve-t:ver25,r-cr:hor20"
