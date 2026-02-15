@@ -4,7 +4,7 @@ return {
   enabled = true,
   keys = {
     { "<leader>a", function() require("harpoon.mark").add_file() end, desc = "Harpoon Add File" },
-    { "<C-p>", function() require("harpoon.ui").toggle_quick_menu() end, desc = "Harpoon Menu" },
+    { "<leader>hp", function() require("harpoon.ui").toggle_quick_menu() end, desc = "Harpoon Menu" },
 
     { "<leader>1", function() require("harpoon.ui").nav_file(1) end },
     { "<leader>2", function() require("harpoon.ui").nav_file(2) end },

@@ -1,4 +1,4 @@
--- completion plugin
+-- plugin for the completion (lsp and snippets)
 return {
   "saghen/blink.cmp",
   enabled = true,
