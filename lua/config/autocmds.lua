@@ -48,3 +48,12 @@ vim.api.nvim_create_user_command("Random", function(opts)
 end, { range = true })
 
 
+-- auto insert mode per il TERMINALE
+vim.api.nvim_create_autocmd("BufEnter", {
+  callback = function()
+    if vim.bo.buftype == "terminal" then
+      vim.cmd("startinsert")
+    end
+  end,
+})
+
