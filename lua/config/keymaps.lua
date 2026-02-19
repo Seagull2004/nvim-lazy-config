@@ -6,9 +6,9 @@ local map = vim.keymap.set
 
 -- GENERIC
 -- map("n", "<leader>h", ":nohlsearch<CR>") -- remove search highlights
-map("v", "<Leader>cp", '"+y')            -- yank stuff in sys buffer
-map("n", "<Leader>cp", ":%y+<CR>")       -- copy all file in sys buffer
-map("n", "<Leader>da", ":%d<CR>")        -- delete content of file
+map("v", "<Leader>cp", '"+y')      -- yank stuff in sys buffer
+map("n", "<Leader>cp", ":%y+<CR>") -- copy all file in sys buffer
+map("n", "<Leader>da", ":%d<CR>")  -- delete content of file
 -- map("n", "<leader>sl", "<cmd>source %<CR>")
 -- map("n", "<leader>lu", ":.lua<CR>")
 -- map("v", "<leader>lu", ":lua<CR>")
@@ -23,8 +23,8 @@ map("n", "n", "nzz")
 map("n", "N", "Nzz")
 
 -- TERMINAL
-map("t", "<Esc>", "<C-\\><C-n>", {noremap=true, desc="just use esc to go in n mode"})
-map("t", "<C-k>", "<C-\\><C-n><C-W>k", {noremap=true, desc="just use esc to go in n mode"})
+map("t", "<Esc>", "<C-\\><C-n>", { noremap = true, desc = "just use esc to go in n mode" })
+map("t", "<C-k>", "<C-\\><C-n><C-W>k", { noremap = true, desc = "just use esc to go in n mode" })
 map("n", "<leader>t", function()
   -- vim.cmd.vnew()
   vim.cmd("sp")
@@ -32,12 +32,18 @@ map("n", "<leader>t", function()
   -- vim.cmd.wincmd("J")
   vim.api.nvim_win_set_height(0, 15)
   vim.cmd("startinsert")
-end, { desc = "Open a little terminal", noremap=true })
+end, { desc = "Open a little terminal", noremap = true })
 
 map("n", "<leader>rc", function()
   if vim.bo.filetype == "python" then
     vim.cmd("sp")
     vim.cmd("term python3 %")
+    vim.cmd("startinsert")
+  end
+  if vim.bo.filetype == "cs" then
+    vim.cmd("sp")
+    vim.cmd("term dotnet run")
+    vim.cmd("startinsert")
   end
 end, { desc = "run current file" })
 
@@ -52,7 +58,7 @@ end, { desc = "run current file" })
 
 vim.keymap.set("n", "<leader><leader>", function()
   Snacks.picker.files({
-    hidden = true, -- 🔑 include dotfolder e dotfile
+    hidden = true,  -- 🔑 include dotfolder e dotfile
     ignored = true, -- ✅ rispetta .gitignore
   })
 end, { desc = "Find files (include dotfolders)" })
