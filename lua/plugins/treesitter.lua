@@ -5,7 +5,7 @@ return {
       "python",
       -- "haskell",
       -- "bash",
-      -- "c",
+      "c",
       -- "diff",
       -- "html",
       -- "javascript",
@@ -21,19 +21,20 @@ return {
       -- "query",
       -- "regex",
       -- "toml",
-      -- "tsx",
-      -- "typescript",
+      "tsx",
+      "typescript",
       -- "vim",
       -- "vimdoc",
       -- "xml",
+      -- "yaml",
       -- "yaml",
     },
     auto_install = true,
     highlight = {
       enable = true,
-      disable = function (lang,buf)
+      disable = function(lang, buf)
         local max_filesize = 100 * 1024 -- 100KB
-        local ok,stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+        local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
         if ok and stats and stats.size > max_filesize then
           return true
         end
