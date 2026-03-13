@@ -22,6 +22,12 @@ map("n", "}", "}zz")
 map("n", "n", "nzz")
 map("n", "N", "Nzz")
 
+-- WINDOW FOCUS
+map("i", "<C-h>", "<Esc><C-W>h")
+map("i", "<C-j>", "<Esc><C-W>j")
+map("i", "<C-k>", "<Esc><C-W>k")
+map("i", "<C-l>", "<Esc><C-W>l")
+
 -- TERMINAL
 map("t", "<Esc>", "<C-\\><C-n>", { noremap = true, desc = "just use esc to go in n mode" })
 map("t", "<C-k>", "<C-\\><C-n><C-W>k", { noremap = true, desc = "just use esc to go in n mode" })
@@ -37,7 +43,7 @@ end, { desc = "Open a little terminal", noremap = true })
 map("n", "<leader>rc", function()
   if vim.bo.filetype == "python" then
     vim.cmd("sp")
-    vim.cmd("term python3 %")
+    vim.cmd("term python3 '%'")
     vim.cmd("startinsert")
   end
   if vim.bo.filetype == "cs" then
