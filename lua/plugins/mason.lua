@@ -45,6 +45,7 @@ return {
         ensure_installed = {
           "stylua",
           "shfmt",
+          "ast-grep",
           "prettier",
         },
       })

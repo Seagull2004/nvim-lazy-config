@@ -9,6 +9,7 @@ return {
         lua = { "stylua" },
         sh = { "shfmt" },
         markdown = { "prettier" },
+        typescript = { "ast-grep", "ts_ls" },
       },
     }
     return opts

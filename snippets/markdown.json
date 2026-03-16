@@ -1,0 +1,45 @@
+{
+  "1#": {
+    "prefix": "1#",
+    "body": [
+      "# "
+    ],
+    "description": "The setup for an h1 heading"
+  },
+  "2#": {
+    "prefix": "2#",
+    "body": [
+      "## "
+    ],
+    "description": "The setup for an h2 heading"
+  },
+  "3#": {
+    "prefix": "3#",
+    "body": [
+      "### "
+    ],
+    "description": "The setup for an h3 heading"
+  },
+  "4#": {
+    "prefix": "4#",
+    "body": [
+      "#### "
+    ],
+    "description": "The setup for an h4 heading"
+  },
+  "5#": {
+    "prefix": "5#",
+    "body": [
+      "##### "
+    ],
+    "description": "The setup for an h5 heading"
+  },
+  "6#": {
+    "prefix": "6#",
+    "body": [
+      "###### "
+    ],
+    "description": "The setup for an h6 heading"
+  }
+}
+
