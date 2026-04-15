@@ -17,6 +17,7 @@ return {
           "cssls",
           "ast_grep",
           "ts_ls",
+          "postgres_lsp",
           -- "rust_analyzer",
           -- "clangd",
           -- "cssls",

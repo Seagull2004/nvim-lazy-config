@@ -28,6 +28,7 @@ return {
       -- "xml",
       -- "yaml",
       -- "yaml",
+      "sql",
     },
     auto_install = true,
     highlight = {
